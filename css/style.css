@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/bg.svg);
+    background-color: #fff;
+}
+
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-image: linear-gradient(#00000027,
+    #00000023),  url(../images/banner.avif);
+    background-position: bottom;
+    width: 320px;
+    height: 640px;
+    border-radius: 30px;
+    box-shadow: 0 56px 72px -30px rgba(50, 55, 63, 0.66);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.header button{
+    background-color: #232631;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px #00000044;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body{
+    color: #fff;
+    background-color: #232631;
+    margin-top: 40%;
+    height: 100%;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    padding: 30px 20px 0 20px;
+}
+
+.body h1{
+    font-size: 20px;
+}
+
+.description{
+    font-size: 14px;
+    opacity: .6;
+}
+
+.rating-container{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.users{
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.img:not(:first-child){
+    margin-left: -10px;
+}
+
+.img1{
+    background-image: url(../images/img1.avif);    
+}
+
+.img2{
+    background-image: url(../images/img2.avif);
+}
+
+.img3{
+    background-image: url(../images/img3.avif);
+}
+
+.img4{
+    background-image: url(../images/img4.avif);
+}
+
+.rating-text{
+    font-size: 16px;
+    margin-left: 14px;
+    opacity: .6;
+}
+
+.check{
+    background-color: #37c2fd;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-size: 11px;
+    letter-spacing: .5px;
+    font-weight: 600;
+}
+
+.about{
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.detail{
+    font-size: 12px;
+    opacity: .6;
+}
+
+.booking-container{
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    margin-top: 38px;
+    background-color: #2e3341;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding: 20px;
+    height: 82px;
+    position: absolute;
+    width: 100%;
+}
+
+.book-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cost p{
+    font-size: 12px;
+    opacity: .6;
+}
+
+.cost h5 span{
+    opacity: .5;
+}
+
+.book{
+    background-color: #37c2fd;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.cancel{
+    background-color: #fd3c56;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    right: -120px;
+    position: absolute;
+    opacity: 0;
+}
+
+.divider{
+    width: 100%;
+    height: 1px;
+    margin-top: 20px;
+    background: #3d4455;
+}
+
+.method{
+    margin-top: 20px;
+}
+
+.heading{
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+.warning{
+    font-size: 11px;
+    color: #fd3c56;
+    margin-top: 10px;
+}
+
+.mehtod-1 img{
+    height: 20px;
+}
+
+.mehtod-1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3d4455;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.card-number{
+    font-size: 14px;
+}
+
+.disclaimer{
+    font-size: 20px;
+}
+
+.disclimer-text{
+    font-size: 11px;
+    opacity: .4;
+}
+
+.final{
+    background-color: #3d4455;
+    color: #747e97;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-top: 44px;
+    text-align: center;
+    width: 100%;
+    cursor: not-allowed;
+}

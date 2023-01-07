@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <button class="back">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="back">
+                <i class="fa-regular fa-bookmark"></i>
+            </button>
+        </div>
+        <div class="body">
+            <h1>Perhentian islands</h1>
+            <p class="description">Terengganu, Malaysia</p>
+            <div class="rating-container">
+                <div class="users">
+                    <div class="img img1"></div>
+                    <div class="img img2"></div>
+                    <div class="img img3"></div>
+                    <div class="img img4"></div>
+                    <p class="rating-text">4.5</p>
+                </div>
+                <button class="check">Check Availability</button>
+            </div>
+            <p class="about">About Trip</p>
+            <p class="detail">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut tempore quibusdam accusantium laudantium placeat, quia impedit similique blanditiis dolore doloribus voluptate in voluptas vitae, earum quas quae omnis repellat quidem.</p>
+            <div class="booking-container">
+                <div class="book-inner">
+                    <div class="cost">
+                        <p>Total cost</p>
+                        <h5>$899 <span>/ person</span></h5>
+                    </div>
+                    <div class="book">Book Now</div>
+                    <div class="cancel">Cancel</div>
+                </div>
+                <div class="divider"></div>
+                <div class="method">
+                    <p class="heading">Payment method</p>
+                    <div class="mehtod-1">
+                        <img src="images/visa.png" alt="">
+                        <p class="card-number">**** **** 2345</p>
+                    </div>
+                    <p class="warning">Insufficient balance</p>
+                    <p class="heading disclaimer">Disclaimer</p>
+                    <p class="heading disclimer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ipsum repellat odit sit beatae! Assumenda autem voluptatem atque, mollitia dolorem adipisci numquam earum possimus natus dicta, blanditiis incidunt, aliquid et?</p>
+                    <div class="final">Confirm Booking</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js" integrity="sha512-f8mwTB+Bs8a5c46DEm7HQLcJuHMBaH/UFlcgyetMqqkvTcYg4g5VXsYR71b3qC82lZytjNYvBj2pf0VekA9/FQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        let t1 = gsap.timeline({ paused: true, reversed: true });
+        const bookNow = document.querySelector('.book')
+        const cancel = document.querySelector('.cancel')
+        bookNow.addEventListener('click', e => {
+            t1.play();
+        });
+        cancel.addEventListener('click', e => {
+            t1.reverse();
+        });
+        t1.to(
+            ".book", {
+            ease: "power1.inOut",
+            opacity: 0,
+        }, 0);
+        t1.to(
+            ".cancel", {
+            ease: "power1.inOut",
+            right: 20,
+            opacity: 1
+        }, .1);
+        t1.to(
+            ".header button", {
+            ease: "power1.inOut",
+            scale: 0,
+            opacity: 0,
+        }, 0);
+        t1.to(
+            ".body", {
+            ease: "power1.inOut",
+            marginTop: 0,
+        }, 0);
+        t1.to(
+            ".booking-container", {
+            ease: "power1.inOut",
+            marginTop: -210,
+            zIndex: 10,
+            height: 500
+        }, 0);
+    </script>
+
+</body>
+</html> 
